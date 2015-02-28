@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -29,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
                         Intent intent = new Intent(MainActivity.this, Class.forName("zzc.learnapp.Learn" + contents[position]));
                         startActivity(intent);
                     } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), "还没写", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
